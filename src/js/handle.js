@@ -5,7 +5,9 @@ import {
   openModalWindow,
   closeModalWindow,
   removeEventListenerModal,
-  getCurrentIndexImage,
+  getCurrentIndexSlide,
+  NextLeftSlide,
+  NextRightSlide,
 } from './utils';
 
 export const handleOpenModal = event => {
@@ -27,9 +29,25 @@ export const handleCloseModal = () => {
 };
 
 export const handleNextLeftSlide = () => {
-  const index = getCurrentIndexImage();
+  NextLeftSlide(getCurrentIndexSlide());
 };
 
 export const handleNextRightSlide = () => {
-  const index = getCurrentIndexImage();
+  NextRightSlide(getCurrentIndexSlide());
+};
+
+export const handlePressKey = event => {
+  switch (event.code) {
+    case 'ArrowLeft':
+      handleNextLeftSlide();
+      break;
+
+    case 'ArrowRight':
+      handleNextRightSlide();
+      break;
+
+    case 'Escape':
+      handleCloseModal();
+      break;
+  }
 };
