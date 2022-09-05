@@ -43,4 +43,8 @@ export const items = [
     img: 'https://regnum.ru/uploads/pictures/news/2019/08/08/regnum_picture_1565235218748739_normal.jpg',
     alt: 'image-11',
   },
+  {
+    img: 'https://cdn.lifehacker.ru/wp-content/uploads/2020/01/06_1580285109.jpg',
+    alt: 'image-12',
+  },
 ];
